@@ -1,0 +1,92 @@
+
+
+
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", Arial, sans-serif;
+  }
+
+  ul {
+  list-style: none;
+  }
+
+  a {
+  text-decoration: none;
+  }
+
+  :root {
+  /* SPACING */
+  --margin-xs: 10px;
+  --margin-s: 20px;
+  --margin-m: 30px;
+  --margin-l: 40px;
+  --margin-xl: 50px;
+  --margin-xxl: 60px;
+  --margin-section: 100px;
+
+  --padding-xs: 10px;
+  --padding-s: 20px;
+  --padding-m: 30px;
+  --padding-l: 40px;
+  --padding-xl: 50px;
+  --padding-xxl: 60px;
+
+  --gap-xs: 5px;
+  --gap-s: 10px;
+  --gap-m: 20px;
+ 
+
+  /* BORDER RADIUS */
+  --border-radius-primary: 100%;
+  --border-radius-xs: 5px;
+  --border-radius-s: 10px;
+  --border-radius-m: 15px;
+ 
+  
+
+  /* BRANDING COLORS */
+  --color-1: ;
+  --color-2: ;
+  --color-3: ;
+  --color-4: ;
+  --color-5: ;
+  --color-6: ;
+
+ /* BACKGROUND-COLORS */
+  --primary-bg: var(--color-1);
+  --secondary-bg: var(--color-2);
+  --tertiary-bg: var(--color-6);
+  --special-bg: var(--color-3);
+
+  /* TEXT-COLORS */
+  --primary-text: var(--color-3);
+  --secondary-text: var(--color-1);
+  --tertiary-text: var(--color-5);
+  --special-text: var(--color-4);
+  --special-v2-text: var(--color-2);
+
+  }
+  
+ /* COLUMN */
+
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  /* ROW */
+  
+  .flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  

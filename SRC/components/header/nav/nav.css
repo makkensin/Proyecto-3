@@ -1,0 +1,17 @@
+
+
+
+
+.nav{
+  /* border: solid 2px black; */
+  width: 25%;
+  height: 100%;
+}
+
+.ul-nav{
+  gap:var(--gap-m);
+  font-weight: 600;
+}
+a{
+  color: black;
+}
