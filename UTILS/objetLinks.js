@@ -1,4 +1,5 @@
 
+
 export const objetLinks = [
      {
        text: "info",
@@ -9,7 +10,11 @@ export const objetLinks = [
       hrefs: "https://www.linkedin.com/in/jorge-g%C3%B3mez-gonz%C3%A1lez-1199882a5/"
      },
      {
-      text: "Blog"
+      text: "Random",
+      color: 'red'
+     },
+     {
+      text: "List"
      }
      
 ];

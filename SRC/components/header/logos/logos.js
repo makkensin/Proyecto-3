@@ -24,7 +24,9 @@ export const printLogos = () => {
   explorar.addEventListener('click', ()=>{
     setTimeout(() => {
       const input = document.querySelector('.input')
+      const i = document.querySelector('.i');
       input.classList.toggle('on');
+      i.classList.toggle('i-on');
       
     }, 500);
   })

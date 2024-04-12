@@ -1,0 +1,21 @@
+
+
+
+
+.random-box{
+  gap: var(--gap-m);
+  flex-wrap: wrap;
+  padding: var(--padding-m);
+}
+.card-random{
+  width: 350px;
+  height: 350px;
+}
+
+.img-random{
+border-radius: 20px;
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+}
+
