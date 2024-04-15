@@ -42,3 +42,19 @@
 .logo > p:hover {
   background-color:rgb(242, 237, 237);
 }
+
+@media ((min-width: 320px) and (max-width: 693px)) {
+
+  .logo > img:first-child{
+    width: 40px;
+    height: 33px;
+  }
+  .logo > img:nth-child(2) {
+   display: none;
+    
+  }
+  .logo > p {
+    font-size: 12px;
+  }
+ }
+ 

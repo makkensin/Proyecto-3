@@ -31,10 +31,7 @@ export const printLogos = () => {
     }, 500);
   })
 
-
-  logo.appendChild(imgLogo1)
-  logo.appendChild(imgLogo2)
-  logo.appendChild(explorar)
+  logo.append(imgLogo1, imgLogo2, explorar)
 
     header.appendChild(logo)
 

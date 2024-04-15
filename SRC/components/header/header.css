@@ -9,4 +9,11 @@
 }
 
 
+@media ((min-width: 320px) and (max-width: 480px)) {
+ #header{
+  padding-left: 0px;
+ }
+}
+
+
 

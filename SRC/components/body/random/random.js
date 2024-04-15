@@ -11,7 +11,7 @@ export const callRandom = () =>{
   fetch(`${endPoint}/random?count=20&client_id=${accesKey}`)
   .then((res) => res.json())
   .then((data)=>{
-      console.log(data);
+     console.log(data);
      randomPicture(data)
   })
   
@@ -21,9 +21,8 @@ export const callRandom = () =>{
   
   }
 
-
-
 export const randomPicture = (array) => {
+  
   
   const body = document.querySelector('body');
   const main = document.createElement('main');
@@ -37,9 +36,12 @@ export const randomPicture = (array) => {
    cardRandom.classList = 'card-random';
    const img = document.createElement('img');
    img.classList = 'img-random';
-   img.src = picture.urls.regular
+   img.src = picture.urls.regular;
+   const parrafo = document.createElement('p')
+   parrafo.classList = 'parrafo'
+   parrafo.textContent = picture.alt_description;
    
-   cardRandom.appendChild(img)
+   cardRandom.append(img, parrafo)
    randomBox.appendChild(cardRandom)
 
   }
@@ -49,5 +51,7 @@ export const randomPicture = (array) => {
 
 
 }
+
+
 
 

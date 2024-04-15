@@ -54,3 +54,38 @@
     object-fit: contain;
   
    }
+
+
+   
+@media (max-width: 1200px){
+  .div-input{
+    width: 45%;
+    }
+}
+
+@media (max-width: 985px){
+  .div-input{
+    width: 35%;
+    }
+}
+
+@media (max-width: 876px){
+  .div-input{
+    width: 45%;
+    }
+}
+
+@media ((min-width: 320px) and (max-width: 480px)) {
+  .on{
+    height: 30px;
+  }
+  .i-on{
+    width: 40px;
+    height: 30px;
+  }
+  .i > img {
+   display: none;
+  
+   }
+  }
+ 

@@ -10,7 +10,7 @@ export const printInput = () => {
   i.classList = 'i';
   const iImg = document.createElement('img');
   iImg.classList = 'i-img';
-  iImg.src ='./public/hallo.png';
+  iImg.src ='./public/skull.png';
   
   const input = document.createElement('input');
   input.classList = 'input';
