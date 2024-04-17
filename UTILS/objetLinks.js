@@ -11,7 +11,8 @@ export const objetLinks = [
      },
      {
       text: "Random",
-      color: 'red'
+      color: 'red',
+      clase :'rand'
      },
      {
       text: "List"

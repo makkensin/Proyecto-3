@@ -17,7 +17,7 @@ export const printNavs = () =>{
   ul.classList = 'ul-nav'; 
   ul.classList.add('flex-container');
   for (const links of objetLinks) {
-    link(ul, links.text, links.hrefs, links.component, links.color);
+    link(ul, links.text, links.hrefs, links.color, links.clase);
   }
   nav.appendChild(ul)
   header.appendChild(nav)

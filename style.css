@@ -90,3 +90,11 @@
     
   }
   
+  .grid-container {
+    display: grid;
+    /* align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center; */
+}

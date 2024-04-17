@@ -12,6 +12,6 @@ import { callDefault } from './SRC/components/body/default/default'
 
 
 renderHeader()
+callRandom()
 callDefault()
-// callRandom()
 
