@@ -12,10 +12,12 @@ export const objetLinks = [
      {
       text: "Random",
       color: 'red',
-      clase :'rand'
+      clase:'rand',
+      hrefs: "#null"
      },
      {
       text: "List"
+     
      }
      
 ];

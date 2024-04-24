@@ -9,7 +9,7 @@
 }
 .card-random{
   width: 300px;
-  height: 370px;
+  height: 500px;
   
 }
 
@@ -31,3 +31,37 @@ font-weight: 700;
 color:whitesmoke;
 }
 
+
+@media (max-width: 505px){
+  .random-box{
+    gap: var(--gap-m);
+    flex-wrap: wrap;
+    padding: var(--padding-s);
+    margin-top: -55px;
+  }
+
+  @keyframes show {
+    from {
+      opacity: 0;
+      scale: 25%;
+    }
+
+    to {
+      opacity: 1;
+      scale: 100%;
+    }
+  }
+
+
+  .img-random{
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+
+    animation-timeline: --image;
+    animation-name: show;
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+   }
+
+  
+}

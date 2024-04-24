@@ -4,7 +4,7 @@ import './default.css'
 
 
 const accesKey = 'hVFO06_ZyjRGFq90xH3sXZVgUz1k18SUYUyt-l2XGto';
-const endPoint = 'https://api.unsplash.com/photos?20-Per-Page&';
+const endPoint = 'https://api.unsplash.com/photos/?';
 
 
 export const callDefault = () => {
@@ -28,7 +28,7 @@ export const defaultPicture = (array) =>{
   const body = document.querySelector('body');
   const main = document.createElement('main');
   const defaultBox = document.createElement('section');
-  defaultBox.innerHTML = '';
+  // defaultBox.innerHTML = '';
   defaultBox.classList = 'default-box';
   defaultBox.classList.add('grid-container');
 
@@ -44,7 +44,7 @@ export const defaultPicture = (array) =>{
    parrafo.textContent = picture.alt_description;
    if (i === 0 || i === 5 || i === 9) {
      cardDefault.classList.add('wide')
-   }if(i === 2){
+   }if(i === 2 || i === 6){
     cardDefault.classList.add('tall')
    }
    

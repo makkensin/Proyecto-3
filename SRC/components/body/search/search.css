@@ -7,6 +7,8 @@
   gap: var(--gap-m);
   flex-wrap: wrap;
 }
+
+
 .card-search{
   width: 350px;
   height: 350px;

@@ -8,11 +8,11 @@ const endPoint = 'https://api.unsplash.com/photos/';
 
 
 export const callRandom = () =>{
-  fetch(`${endPoint}/random?count=20&client_id=${accesKey}`)
+  fetch(`${endPoint}random?count=20&client_id=${accesKey}`)
   .then((res) => res.json())
-  .then((data)=>{
-     console.log(data);
-     randomPicture(data)
+  .then((res) =>{
+     console.log(res);
+     randomPicture(res);
   })
   
   .catch((error) =>{
@@ -22,20 +22,22 @@ export const callRandom = () =>{
   }
 
 export const randomPicture = (array) => {
-  
+
+ 
   const body = document.querySelector('body');
   const main = document.createElement('main');
   const randomBox = document.createElement('section');
+  // randomBox.innerHTML = '';
   randomBox.classList = 'random-box';
   randomBox.classList.add('flex-container');
   
   const rand = document.querySelector('.rand');
   
+  
   rand.addEventListener('click', () =>{
     const defaul = document.querySelector('.default-box');
     defaul.innerHTML = '';
-
-
+    
     for (const picture of array) {
       const cardRandom = document.createElement('div');
       cardRandom.classList = 'card-random';
@@ -53,14 +55,13 @@ export const randomPicture = (array) => {
     }
     main.appendChild(randomBox)
     body.appendChild(main)
-   
-
+    
+    
   })
 
  
 
 }
-
 
 
 
