@@ -2,75 +2,121 @@
 
 import'./search.css'
 
-const body = document.querySelector('body');
-const main = document.createElement('main');
-const searchBox = document.createElement('section');
-// searchBox.innerHTML = '';
-searchBox.classList = 'search-box';
-searchBox.classList.add('flex-container');
-const input = document.querySelector('input');
-let keyword = '';
-let page = 1;
+
+
 const accesKey = 'hVFO06_ZyjRGFq90xH3sXZVgUz1k18SUYUyt-l2XGto';
 const endPoint = 'https://api.unsplash.com/search/photos';
 
-
-
-export const callSearch = () =>{
-   keyword = input.value;
-  fetch(`${endPoint}?${page}&query=${keyword}&client_id=${accesKey}`)
-  .then((res) => res.json())
-  .then((data)=>{
+export const callSearch = (inputValue) => {
+  fetch(`${endPoint}?per_page=20&query=${inputValue}&client_id=${accesKey}`)
+    .then((res) => res.json())
+    .then((data) => {
       console.log(data);
+      searchPictures(data.results);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
 
-    const resultados = data.results;
-    resultados.forEach((result) => {
-      const cardSearch = document.createElement('div');
-      cardSearch.classList = 'card-search';
-      const img = document.createElement('img');
-      img.classList = 'img-search';
-      img.src = picture.urls.regular
-      
-      cardSearch.appendChild(img)
-      searchBox.appendChild(cardSearch)
-    })
-      
-  })
-  
-  .catch((error) =>{
-     console.log(error);
-    })
-  
+export const searchPictures = (array) => {
+
+  const body = document.querySelector('body');
+  const main = document.createElement('main');
+  main.innerHTML = '';
+  const searchBox = document.createElement('section');
+  searchBox.classList = 'search-box';
+  searchBox.classList.add('flex-container');
+
+
+  const defaul = document.querySelector('.default-box');
+    defaul.innerHTML = '';
+
+  for (const picture of array) {
+    const cardSearch = document.createElement('div');
+    cardSearch.classList = 'card-search';
+    const img = document.createElement('img');
+    img.classList = 'img-search';
+    img.src = picture.urls.regular;
+    const parrafo = document.createElement('p');
+    parrafo.classList = 'parrafo';
+    parrafo.textContent = picture.alt_description;
+    cardSearch.append(img, parrafo);
+    searchBox.appendChild(cardSearch);
   }
 
+  main.appendChild(searchBox);
+  body.appendChild(main);
+};
 
 
-input.addEventListener('submit', (e) =>{
-  e.preventDefault()
-  page = 1;
-  callSearch()
-})
- 
+document.addEventListener('DOMContentLoaded', () => {
+  const input = document.querySelector('.input');
 
-
-  
-
-
-
-
-
-
-
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      const inputValue = input.value;
+      callSearch(inputValue);
+    }
+  });
+});
 
 
 
-// export const callSearch = (query) =>{
 
-//   fetch(`${endPoint}?${page}&query=${keyword}&client_id=${accesKey}`)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let keyword = '';
+
+// const accesKey = 'hVFO06_ZyjRGFq90xH3sXZVgUz1k18SUYUyt-l2XGto';
+// const endPoint = 'https://api.unsplash.com/search/photos';
+
+
+
+// export const callSearch = () =>{
+
+
+
+//   keyword = input.value;
+
+//   fetch(`${endPoint}?per_page=20&query=${keyword}&client_id=${accesKey}`)
 //   .then((res) => res.json())
 //   .then((data)=>{
-//       console.log(data.results);
-//       searchPictures(data.results)
+//    console.log(data);
+//    let resultados = data.results
+//    searchPictures(resultados)
+  
      
 //   })
   
@@ -80,28 +126,46 @@ input.addEventListener('submit', (e) =>{
   
 //   }
 
-// export const searchPictures = (array) =>{
+
+
+//  export const searchPictures = (array) =>{
 
 //   const body = document.querySelector('body');
 //   const main = document.createElement('main');
-//   const input = document.querySelector('.input');
+
 //   const searchBox = document.createElement('section');
-//   searchBox.innerHTML = '';
 //   searchBox.classList = 'search-box';
 //   searchBox.classList.add('flex-container');
 
+//   const input = document.querySelector('.input')
 
-//   for (const picture of array) {
-//     const cardSearch = document.createElement('div');
-//     cardSearch.classList = 'card-search';
-//     const img = document.createElement('img');
-//     img.classList = 'img-search';
-//     img.src = picture.urls.regular
-    
-//     cardSearch.appendChild(img)
-//     searchBox.appendChild(cardSearch)
+//   input.addEventListener('keydown', (e) =>{
+
+//     if(e.key === 'Enter'){
+      
+//       const defaul = document.querySelector('.default-box');
+//       defaul.innerHTML = '';
+//       searchBox.innerHTML = '';
+
+//       for (const picture of array) {
+//         const cardSearch = document.createElement('div');
+//         cardSearch.classList = 'card-search';
+//         const img = document.createElement('img');
+//         img.classList = 'img-search';
+//         img.src = picture.urls.regular;
+//         const parrafo = document.createElement('p')
+//         parrafo.classList = 'parrafo'
+//         parrafo.textContent = picture.alt_description;
+        
+//         cardSearch.append(img, parrafo)
+//         searchBox.appendChild(cardRandom)
+     
+        
+//       }
+//       main.appendChild(searchBox)
+//       body.appendChild(main)
+//     }
+//   })
+
 //   }
-
-
-// }
 

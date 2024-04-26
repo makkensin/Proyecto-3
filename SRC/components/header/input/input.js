@@ -8,13 +8,13 @@ export const printInput = () => {
   divInput.classList = 'div-input';
   divInput.classList.add('flex-container');
   const i = document.createElement('div');
-  i.classList = 'i';
+  i.classList = 'i i-on';
   const iImg = document.createElement('img');
   iImg.classList = 'i-img';
   iImg.src ='./public/skull.png';
   
   const input = document.createElement('input');
-  input.classList = 'input';
+  input.classList = 'input on';
   input.type = 'text';
   input.placeholder = ''
  

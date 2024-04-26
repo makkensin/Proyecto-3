@@ -26,8 +26,8 @@ export const randomPicture = (array) => {
  
   const body = document.querySelector('body');
   const main = document.createElement('main');
+
   const randomBox = document.createElement('section');
-  // randomBox.innerHTML = '';
   randomBox.classList = 'random-box';
   randomBox.classList.add('flex-container');
   
@@ -35,8 +35,12 @@ export const randomPicture = (array) => {
   
   
   rand.addEventListener('click', () =>{
+
     const defaul = document.querySelector('.default-box');
     defaul.innerHTML = '';
+    randomBox.innerHTML = '';
+    
+    
     
     for (const picture of array) {
       const cardRandom = document.createElement('div');
