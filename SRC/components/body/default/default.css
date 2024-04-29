@@ -1,8 +1,11 @@
 
 
+main{
+ padding-top: 110px;
+}
+
 
 .default-box{
-  
   gap: var(--gap-m);
   flex-wrap: wrap;
   padding: var(--padding-xl);

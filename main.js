@@ -13,9 +13,9 @@ import { callSearch } from './SRC/components/body/search/search'
 
 
 renderHeader()
+callSearch()
 callDefault()
 callRandom()
-callSearch()
 
 
 

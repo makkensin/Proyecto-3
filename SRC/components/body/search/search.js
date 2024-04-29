@@ -12,7 +12,8 @@ export const callSearch = (inputValue) => {
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
-      searchPictures(data.results);
+      let resultados = data.results
+      searchPictures(resultados);
     })
     .catch((error) => {
       console.log(error);
@@ -23,15 +24,10 @@ export const searchPictures = (array) => {
 
   const body = document.querySelector('body');
   const main = document.createElement('main');
-  main.innerHTML = '';
   const searchBox = document.createElement('section');
   searchBox.classList = 'search-box';
   searchBox.classList.add('flex-container');
-
-
-  const defaul = document.querySelector('.default-box');
-    defaul.innerHTML = '';
-
+  
   for (const picture of array) {
     const cardSearch = document.createElement('div');
     cardSearch.classList = 'card-search';
@@ -56,6 +52,10 @@ document.addEventListener('DOMContentLoaded', () => {
   input.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
       const inputValue = input.value;
+      const defaul = document.querySelector('.default-box');
+      const main = document.querySelector('main')
+      defaul.innerHTML = '';
+      main.innerHTML = '';
       callSearch(inputValue);
     }
   });
