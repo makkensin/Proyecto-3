@@ -25,7 +25,7 @@ export const randomPicture = (array) => {
 
  
   const body = document.querySelector('body');
-  const main = document.createElement('main');
+  // const main = document.createElement('main');
 
   const randomBox = document.createElement('section');
   randomBox.classList = 'random-box';
@@ -38,9 +38,7 @@ export const randomPicture = (array) => {
 
     const defaul = document.querySelector('.default-box');
     defaul.innerHTML = '';
-    randomBox.innerHTML = '';
-    
-    
+    // randomBox.innerHTML = '';
     
     for (const picture of array) {
       const cardRandom = document.createElement('div');
@@ -57,8 +55,7 @@ export const randomPicture = (array) => {
    
       
     }
-    main.appendChild(randomBox)
-    body.appendChild(main)
+    body.appendChild(randomBox)
     
     
   })

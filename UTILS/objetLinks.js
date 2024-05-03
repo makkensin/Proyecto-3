@@ -13,7 +13,7 @@ export const objetLinks = [
       text: "Random",
       color: 'red',
       clase:'rand',
-      hrefs: "#null"
+      hrefs: "#"
      }
        
 ];
