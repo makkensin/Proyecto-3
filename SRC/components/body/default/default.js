@@ -26,9 +26,10 @@ export const callDefault = () => {
 export const defaultPicture = (array) =>{
 
   const body = document.querySelector('body');
-  const main = document.createElement('main');
+  const main = document.querySelector('main');
+  main.innerHTML = '';
   const defaultBox = document.createElement('section');
-  // defaultBox.innerHTML = '';
+  defaultBox.innerHTML = '';
   defaultBox.classList = 'default-box';
   defaultBox.classList.add('grid-container');
 
@@ -55,5 +56,6 @@ export const defaultPicture = (array) =>{
 
   main.appendChild(defaultBox)
   body.appendChild(main)
+  
 }
 

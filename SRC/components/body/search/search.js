@@ -48,24 +48,25 @@ export const searchPictures = (array) => {
 };
 
 
-document.addEventListener('DOMContentLoaded', () => {
-  const input = document.querySelector('.input');
+// document.addEventListener('DOMContentLoaded', () => {
+//   const input = document.querySelector('.input');
 
-  input.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') {
-      const inputValue = input.value;
-      const defaul = document.querySelector('.default-box');
-      const main = document.querySelector('main')
-      defaul.innerHTML = '';
-      main.innerHTML = '';
-      callSearch(inputValue);
-    }
-  });
-});
+//   input.addEventListener('keydown', (e) => {
+//     if (e.key === 'Enter') {
+//       let inputValue = input.value;
+//       searchBox.innerHTML = ''
+//       callSearch(inputValue)
+//     }
+//   });
+// });
 
 
 
-
+  // const defaul = document.querySelector('.default-box');
+      // const main = document.querySelector('main')
+      // defaul.innerHTML = '';
+      /// main.innerHTML = '';
+      // callSearch(inputValue);
 
 
 

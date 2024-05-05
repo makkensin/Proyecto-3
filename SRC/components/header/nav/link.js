@@ -9,7 +9,6 @@ export const link = (ul, text, hrefs, color, clase) =>{
   a.href = hrefs;
   a.classList = clase;
   a.style.color = color;
-  
   li.appendChild(a);
  
 
