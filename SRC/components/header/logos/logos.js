@@ -12,10 +12,10 @@ export const printLogos = () => {
   logo.className = 'logo';
   logo.classList.add('flex-container')  
   const imgLogo1 = document.createElement ('img');
-  imgLogo1.src = './public/pinter-1.png';
+  imgLogo1.src = '/pinter-1.png';
   imgLogo1.alt = 'logo pinterest'
   const imgLogo2 = document.createElement('img');
-  imgLogo2.src = './public/pinter-2.png';
+  imgLogo2.src = '/pinter-2.png';
   imgLogo2.alt = 'logo2 pinterest'
   const explorar = document.createElement('p')
   explorar.className = 'explorar';

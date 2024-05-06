@@ -11,7 +11,7 @@ export const printInput = () => {
   i.classList = 'i i-on';
   const iImg = document.createElement('img');
   iImg.classList = 'i-img';
-  iImg.src ='./public/skull.png';
+  iImg.src ='/skull.png';
   
   const input = document.createElement('input');
   input.classList = 'input on';
