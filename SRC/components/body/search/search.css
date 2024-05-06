@@ -6,12 +6,12 @@
 .search-box{
   gap: var(--gap-m);
   flex-wrap: wrap;
+  padding: var(--padding-xl);
 }
 
-
 .card-search{
-  width: 450px;
-  height: 350px;
+  width: 300px;
+  height: 500px;
 }
 
 .img-search{
@@ -19,4 +19,56 @@ border-radius: 20px;
  width: 100%;
  height: 100%;
  object-fit: cover;
+}
+.parrafo{
+  position: relative;
+  bottom: 55px;
+  text-align: center;
+  font-size: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-weight: 700;
+  color:whitesmoke;
+  }
+
+  @media (max-width: 1410px){
+
+    .card-search{
+      width: 250px;
+      height: 500px;
+      
+    }
+  
+  }
+@media (max-width: 505px){
+  .search-box{
+    gap: var(--gap-s);
+    flex-wrap: wrap;
+    margin-top: -55px;
+  }
+
+  @keyframes show {
+    from {
+      opacity: 0;
+      scale: 25%;
+    }
+
+    to {
+      opacity: 1;
+      scale: 100%;
+    }
+  }
+
+
+  .img-search{
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+
+    animation-timeline: --image;
+    animation-name: show;
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+   }
+
+  
 }

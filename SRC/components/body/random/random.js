@@ -25,12 +25,11 @@ export const randomPicture = (array) => {
 const body = document.querySelector('body');
 const main = document.querySelector('main')
  main.innerHTML = '';
-  const defaultBox = document.querySelector('section');
+  
   const randomBox = document.createElement('section');
   randomBox.classList = 'random-box';
   randomBox.classList.add('flex-container');
-  defaultBox.innerHTML = '';
-  randomBox.innerHTML = '';
+ 
   
     for (const picture of array) {
       const cardRandom = document.createElement('div');

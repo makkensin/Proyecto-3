@@ -5,7 +5,7 @@
 .random-box{
   gap: var(--gap-m);
   flex-wrap: wrap;
-  padding: var(--padding-m);
+  padding: var(--padding-xl);
 }
 .card-random{
   width: 300px;
@@ -31,12 +31,19 @@ font-weight: 700;
 color:whitesmoke;
 }
 
+@media (max-width: 1410px){
 
+  .card-random{
+    width: 250px;
+    height: 500px;
+    
+  }
+
+}
 @media (max-width: 505px){
   .random-box{
-    gap: var(--gap-m);
+    gap: var(--gap-s);
     flex-wrap: wrap;
-    padding: var(--padding-s);
     margin-top: -55px;
   }
 

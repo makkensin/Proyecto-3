@@ -23,7 +23,8 @@ export const callSearch = (inputValue) => {
 export const searchPictures = (array) => {
   
   const body = document.querySelector('body');
-  // const main = document.createElement('main');
+  const main = document.querySelector('main');
+  main.innerHTML = '';
   const searchBox = document.createElement('section');
   searchBox.classList = 'search-box';
   searchBox.classList.add('flex-container');
@@ -37,14 +38,14 @@ export const searchPictures = (array) => {
     const parrafo = document.createElement('p');
     parrafo.classList = 'parrafo';
     parrafo.textContent = picture.alt_description;
+
     cardSearch.append(img, parrafo);
     searchBox.appendChild(cardSearch);
   }
 
-  // main.appendChild(searchBox);
-  // body.appendChild(main);
   
-  body.append(searchBox)
+  main.append(searchBox);
+  body.append(main);
 };
 
 
