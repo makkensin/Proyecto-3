@@ -8,6 +8,7 @@ import { callSearch } from "../SRC/components/body/search/search";
 
 
 
+
 export const eventos = () =>{
 
   const rand = document.querySelector('.rand');
@@ -28,6 +29,7 @@ export const eventos = () =>{
     }if (searchBox) {
      input.value = '';
      searchBox.remove();
+    
    }
    
    callDefault();

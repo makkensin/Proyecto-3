@@ -1,6 +1,8 @@
 
 
 import'./search.css'
+import { tryAgain } from './tryAgain';
+
 
 
 
@@ -13,7 +15,11 @@ export const callSearch = (inputValue) => {
     .then((data) => {
       console.log(data);
       let resultados = data.results
+      if (resultados = []) {
+        tryAgain()
+      }
       searchPictures(resultados);
+     
     })
     .catch((error) => {
       console.log(error);
