@@ -42,12 +42,13 @@ export const eventos = () =>{
   input.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
       let inputValue = input.value;
+      if (input.value === "") {
+        return;
+      }
       callSearch(inputValue)
     }
   });
 });
-
-
 }
 
 

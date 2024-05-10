@@ -1,7 +1,7 @@
 
 
 import'./search.css'
-import { tryAgain } from './tryAgain';
+
 
 
 
@@ -15,10 +15,19 @@ export const callSearch = (inputValue) => {
     .then((data) => {
       console.log(data);
       let resultados = data.results
-      if (resultados = []) {
-        tryAgain()
+      if (data.total == 0) {
+        const main = document.querySelector("main");
+        main.remove();
+        const newMain = document.createElement("main");
+        const body = document.querySelector("body");
+        newMain.innerHTML =`<p class = "error">TRY AGAIN ....</p>` 
+        
+        body.append(newMain);
+      }else{
+
+        console.log(resultados);
+        searchPictures(resultados);
       }
-      searchPictures(resultados);
      
     })
     .catch((error) => {
